@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Food - Food Donation App</title>
+    <link rel="stylesheet" href="donateFood.css">
+   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" as="style">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+
+  </head>
+
+  <body>
+
+    <div class="header">
+      <h1>Food Donation App</h1>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#">About Us</a>
+        <a href="#" ID="DONATE">Donate Food</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="#">Request Food</a>
+      </div>
+    </div>
+    <div id="donationDetails">
+      <center>
+        <!-- <h2>Donation Details</h2> -->
+      </center>
+      <!-- <img id=""  src="./ui/edited/2.png"> -->
+      <div id="blobDonate">
+        <div id="netralizer">
+          <img id="rightHand" src="./ui/edited/hand.png">
+          <img id="leftHand" src="./ui/edited/leftHand.png">
+          <img id='user1' src="./images/user1.png">
+        </div>
+      </div>
+      <div id="textSection">
+        <h1>INDIVIDUAL DONATION</h1>
+        <p style="text-align: center; padding-right: 10px;">Join Us in Making a
+          Difference, we believe that every act of kindness, no matter how
+          small, has the power to make a significant impact. By contributing to
+          our cause, you can be a part of something bigger a movement dedicated
+          to alleviating hunger and providing hope to those in need.
+        </p>
+
+        <div id="textbox">
+          <h4>Why Donate?</h4>
+          <p>
+            Millions of individuals and families around the world struggle with
+            food insecurity every day. Your donation can help provide nutritious
+            meals to those who are most vulnerable, offering them not only
+            sustenance but also dignity and hope for a better tomorrow. With
+            your support, we can make a tangible difference in the lives of
+            countless individuals, one meal at a time.
+          </p>
+        </div>
+        <div id="textbox">
+          <h4>Impact of Your Donation</h4>
+
+          <p>Your generosity enables us to reach more individuals and families
+            in need, providing them with access to essential food supplies and
+            resources. From children facing hunger to seniors struggling to make
+            ends meet, your donation has the power to transform lives and build
+            stronger, more resilient communities. Together, we can create a
+            world where no one has to go to bed hungry.
+          </p>
+        </div>
+
+      </div>
+      <div class="options">
+        <center><div id="dashboard">Dashboard</center>
+          <div id="choice">
+            <div class="box"><div><h3>INDIVIDUAL DONATION</h3></div></div>
+            <div class="box" id="bulkDonationBtn"><div><h3>BULK
+                  DONATION</h3></div></div>
+            <div class="box"
+              id="NGOCardBtn"><div><h3>NGO<br>DETAILS</h3></div></div>
+          </div>
+          <div id="formArea">
+            <div id="round1"></div>
+            <div id="round2"></div>
+
+            <form id="donationForm" class="form-input">
+
+              <input type="text" class="tdShrink1" id="foodType" name="foodType"
+                placeholder="  Item Name" required>
+
+              <input type="number" id="quantity" name="quantity"
+                placeholder="  Quantity" required><br>
+              <div style="display: inline-block;"><label>Cooked Time</label><br>
+                <input type="time" class="tdShrink2" id="timing" name="timing"
+                  placeholder="  Cooked Time" required>
+              </div>
+              <div style="display: inline-block;"><label>Pickup Date</label><br>
+                <input type="date" class="tdShrink1" id="pickupDate"
+                  name="pickupDate" placeholder="  Pickup Date" required>
+              </div><br>
+              <input type="text" class="tdShrink2" id="locationDetails"
+                name="location" placeholder="  Location"><br>
+              <button id="getLocationButton">Use My Current Location</button>
+              <p id="location"></p>
+            </form>
+            <button type="submit" class="btn">Donate Food</button>
+          </div>
+        </div>
+        <div class="dashboard">
+          <h1>DONATOR DASHBOARD</h1>
+
+          <!-- Card 1: Total Donations -->
+          <div class="card">
+            <div class="card-header">Total Donations</div>
+            <div class="score">50</div>
+          </div>
+
+          <!-- Card 2: Current Month Donations -->
+          <div class="card">
+            <div class="card-header">This Month</div>
+            <div class="score">10</div>
+          </div>
+
+          <!-- Card 3: Last Month Donations -->
+          <div class="card">
+            <div class="card-header">Last Month</div>
+            <div class="score">20</div>
+          </div>
+
+          <div id="cardRank">
+            <div class="card-header">Overall Rank</div>
+            <div class="score">101</div>
+          </div>
+        </div>
+        <div class="bulkDonation" id="bulk-donation-popup">
+          <button id="close-btn">X</button>
+          <div class="top">
+            <center><h2>BULK DONATION</h2></center>
+          </div>
+
+          <div class="scrollable-container">
+            <div class="trustCard">
+              <img src="./images/trust1.avif" alt="Trust 1">
+              <div class="card-details">
+                <h3>kathiresan child home</h3>
+                <p>Number of Persons: 72</p>
+                <p>Contact: trust1@gmail.com</p>
+                <p>Phone no:9864678990</p>
+              </div>
+            </div>
+
+            <div class="trustCard">
+              <img src="./images/trust2.webp" alt="Trust 1">
+              <div class="card-details">
+                <h3>Annai Teresa Trust</h3>
+                <p>Number of Persons: 100</p>
+                <p>Contact: annai@gmail.com</p>
+                <p>phone no:9876653710</p>
+              </div>
+            </div>
+
+            <div class="trustCard">
+              <img src="./images/trust3.jpeg" alt="Trust 1">
+              <div class="card-details">
+                <h3>Ramasamy Memorial</h3>
+                <p>Number of Persons: 83</p>
+                <p>Contact: ramasamy01@gmail.com</p>
+                <p>Phone no:6754678933</p>
+              </div>
+            </div>
+            <div class="trustCard">
+              <img src="./images/trust4.webp" alt="Trust 1">
+              <div class="card-details">
+                <h3>manonmanium trust</h3>
+                <p>Number of Persons: 71</p>
+                <p>Contact: manotrust@gmail.com</p>
+                <p>Phone no:6754678933</p>
+              </div>
+            </div>
+            <div class="trustCard">
+              <img src="./images/trust5.jpg" alt="Trust 1">
+              <div class="card-details">
+                <h3>Kalaam Oldage home</h3>
+                <p>Number of Persons: 63</p>
+                <p>Contact: kalaamoldage@gmail.com</p>
+                <p>Phone no:6345678933</p>
+              </div>
+            </div>
+            <div class="trustCard">
+              <img src="./images/trust6.png" alt="Trust 1">
+              <div class="card-details">
+                <h3>Children Charitable</h3>
+                <p>Number of Persons: 79</p>
+                <p>Contact: childcctrust@gmail.com</p>
+                <p>phone no:8765653710</p>
+              </div>
+            </div>
+
+            <div class="trustCard">
+              <img src="./images/trust7.jpg" alt="Trust 1">
+              <div class="card-details">
+                <h3>Grace peter Trust</h3>
+                <p>Number of Persons: 69</p>
+                <p>Contact: gracepet345@gmail.com</p>
+                <p>Phone no:6754679876</p>
+              </div>
+            </div>
+            <div class="trustCard">
+              <img src="./images/trust8.jpeg" alt="Trust 1">
+              <div class="card-details">
+                <h3>Sri Subramani trust</h3>
+                <p>Number of Persons: 91</p>
+                <p>Contact: srisubramani@gmail.com</p>
+                <p>Phone no:6754765833</p>
+              </div>
+            </div>
+            <div class="trustCard">
+              <img src="./images/trust9.jpeg" alt="Trust 1">
+              <div class="card-details">
+                <h3>IFET Trust</h3>
+                <p>Number of Persons: 63</p>
+                <p>Contact: ifetk@gmail.com</p>
+                <p>Phone no:6564378933</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NGO CARD  -->
+        <div class="NGOCard">
+          <button id="closeBtn">X</button>
+          <div class="top">
+            <center><h2>NGO DETAILS</h2></center>
+          </div>
+
+          <div class="scrollable-container">
+            <div class="trustCard">
+              <img src="./images/trust1.avif" alt="Trust 1">
+              <div class="card-details">
+                <h3>kathiresan child home</h3>
+                <p>Number of Persons: 72</p>
+                <p>Contact: trust1@gmail.com</p>
+                <p>Phone no:9864678990</p>
+              </div>
+            </div>
+
+            <div class="trustCard">
+              <img src="./images/trust2.webp" alt="Trust 1">
+              <div class="card-details">
+                <h3>Annai Teresa Trust</h3>
+                <p>Number of Persons: 100</p>
+                <p>Contact: annai@gmail.com</p>
+                <p>phone no:9876653710</p>
+              </div>
+            </div>
+
+            <div class="trustCard">
+              <img src="./images/trust3.jpeg" alt="Trust 1">
+              <div class="card-details">
+                <h3>Ramasamy Memorial</h3>
+                <p>Number of Persons: 83</p>
+                <p>Contact: ramasamy01@gmail.com</p>
+                <p>Phone no:6754678933</p>
+              </div>
+            </div>
+            <div class="trustCard">
+              <img src="./images/trust4.webp" alt="Trust 1">
+              <div class="card-details">
+                <h3>manonmanium trust</h3>
+                <p>Number of Persons: 71</p>
+                <p>Contact: manotrust@gmail.com</p>
+                <p>Phone no:6754678933</p>
+              </div>
+            </div>
+            <div class="trustCard">
+              <img src="./images/trust5.jpg" alt="Trust 1">
+              <div class="card-details">
+                <h3>Kalaam Oldage home</h3>
+                <p>Number of Persons: 63</p>
+                <p>Contact: kalaamoldage@gmail.com</p>
+                <p>Phone no:6345678933</p>
+              </div>
+            </div>
+            <div class="trustCard">
+              <img src="./images/trust6.png" alt="Trust 1">
+              <div class="card-details">
+                <h3>Children Charitable</h3>
+                <p>Number of Persons: 79</p>
+                <p>Contact: childcctrust@gmail.com</p>
+                <p>phone no:8765653710</p>
+              </div>
+            </div>
+
+            <div class="trustCard">
+              <img src="./images/trust7.jpg" alt="Trust 1">
+              <div class="card-details">
+                <h3>Grace peter Trust</h3>
+                <p>Number of Persons: 69</p>
+                <p>Contact: gracepet345@gmail.com</p>
+                <p>Phone no:6754679876</p>
+              </div>
+            </div>
+            <div class="trustCard">
+              <img src="./images/trust8.jpeg" alt="Trust 1">
+              <div class="card-details">
+                <h3>Sri Subramani trust</h3>
+                <p>Number of Persons: 91</p>
+                <p>Contact: srisubramani@gmail.com</p>
+                <p>Phone no:6754765833</p>
+              </div>
+            </div>
+            <div class="trustCard">
+              <img src="./images/trust9.jpeg" alt="Trust 1">
+              <div class="card-details">
+                <h3>IFET Trust</h3>
+                <p>Number of Persons: 63</p>
+                <p>Contact: ifetk@gmail.com</p>
+                <p>Phone no:6564378933</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    
+      const f = document.querySelector('.container');
+      
+      var lhand=document.getElementById('leftHand');
+      var rhand=document.getElementById('rightHand');
+      var user1=document.getElementById('user1');
+     
+      
+     
+
+     //dashboard card 
+      const dashboard = document.getElementsByClassName("dashboard");
+      const dashButton = document.getElementById('dashboard');
+      let dashButtonSwitch=0;
+       dashButton.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        if(dashButtonSwitch==0){
+          dashboard[0].style.top = "30px";
+          dashButtonSwitch=1;
+          lhand.style.bottom='-150px';
+          // rhand.style.left='260px';
+          rhand.style.bottom='-330px';
+          user1.style.bottom='30px';
+        }
+        else{
+          dashboard[0].style.top = "570px";
+          dashButtonSwitch=0;
+          lhand.style.bottom='0px';
+          rhand.style.bottom='0px';
+          user1.style.bottom='-270px';
+        }
+          
+        });
+
+     //bulk donation   
+       let bulkDonationBtn=document.getElementById('bulkDonationBtn');
+       bulkDonationBtn.addEventListener('click', function() {
+      document.getElementById('bulk-donation-popup').style.display = 'block';
+      });
+
+      document.getElementById('close-btn').addEventListener('click', function() {
+      document.getElementById('bulk-donation-popup').style.display = 'none';
+      });
+
+      // for NGO card pop up
+       let NGOCardBtn=document.getElementById('NGOCardBtn');
+      const NGOCard=document.getElementsByClassName('NGOCard');
+       NGOCardBtn.addEventListener('click', function() {
+      NGOCard[0].style.display = 'block';
+      });
+      document.getElementById('closeBtn').addEventListener('click', function() {
+      NGOCard[0].style.display = 'none';
+      });
+ 
+      //getting user location
+      const getLocationButton = document.getElementById('getLocationButton');
+      getLocationButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        getLocation(); // Call getLocation() when the "Get Location" button is clicked
+      });
+
+      //getting current location
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          alert("Geolocation is not supported by this browser.");
+        }
+      }
+
+      function showPosition(position) {
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+        document.getElementById("location").innerHTML = "Latitude: " + latitude + "       Longitude: " + longitude;
+      }
+
+     
+    });
+
+  </script>
+
+    </body>
+
+  </html>
