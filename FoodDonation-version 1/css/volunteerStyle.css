@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  font-family: "poppins";
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+  }
+  .header { 
+    color: #006400;
+    padding: 10px 30px;
+    margin-top: -15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navlinks {
+    display: flex;
+    margin-right: 30px;
+  }
+  
+  .navlinks a {
+    color: #006400;
+    margin-left: 25px;
+    text-decoration: none;
+  }
+  a {
+    color:#4CAF50;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #00fd00;
+  }
+   #volunteerLink{
+    color: #00fd00;
+  }
+ 
+  #volunteerDetails{
+/*    background-color: grey;*/
+    height: 550px;
+    width: 1300px;
+    top:-15px;
+    position: relative;
+    left: 25px;
+   }
+   .greetContainer{
+    width: 44%;
+    height: 400px;
+/*    background-color:pink ;*/
+    position: absolute;
+    top: 140px;
+    z-index: 1;
+   }
+   #greetMain{
+    font-size: 60px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+   }
+   #greetTagline{
+     margin-top: 0px;
+    margin-bottom: 0px;
+    color:red;
+   }
+  #greetTagline .typewrite{  /* for tag line text color*/
+    color:  #4CAF50;
+   }
+   /* Style for the dashboard container */
+  .dashboard {
+    width: 500px;
+    height: 250px; 
+/*    background-color: red; */
+    position: absolute;
+    text-align: center;
+    z-index: 3;
+    bottom: -20px;
+    left: -30px;
+  }
+
+  /* Style for the card */
+  .card {
+    width: 80px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+    display: inline-block; /* cards stay in a row */
+    vertical-align: top; /* Align cards to the top */
+  }
+
+  /* Style for the card header */
+  .card-header {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color:#4caf50;
+  }
+
+  /* Style for the score */
+  .score {
+    font-size: 36px;
+    color: black;
+  }
+
+   #mainSection{
+    width:50%;
+    height: 550px;
+    background-color: white;/*red section*/
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+
+   }
+  #innerSection{
+      width:450px;
+    height: 500px;
+    background-color: rgb(255, 255, 255, 1.0);
+   position: absolute;
+   bottom: 0px;
+   right: 0px;
+   border: 1px dashed black;
+   }
+   
+  #innerSection .sections{
+    width: 450px;
+    height: 490px;
+    position: absolute;
+  } 
+#availableDonation{
+/*    background-color: olive;*/
+   display: flex-inline;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#messageBox{
+ 
+  width: 100%;
+  height: 100px;
+  border-radius: 5px;
+  position: relative;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+}
+#messageBox h3{
+  margin: 0px;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+#messageBox p{
+  margin: 0px;
+  padding-left: 10px;
+}
+#messageBox #buttonBox {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+#buttonBox button{
+      border: none;
+    border-radius: 3px;
+    color: white;
+    font-size:small;
+    font-weight: 600;
+}
+#messageStatus{
+  background-color: red;
+  display: inline-block;
+  border-radius: 50px 50px 50px 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  top: 10px;right: -10px;
+  transform: scale(0.7);
+  color: white;
+}
+#volImageSection{
+    width:50%;
+    height: 100%;
+/*    background-color: hotpink;*/
+    background-image: url('./images/gif/deliveryBikeFinal.gif');
+    transform: scaleX(-1) scale(0.5);
+    background-size: cover;
+    position: absolute;
+    top: -10%;
+    left:290px;
+    z-index: 6;
+    animation-name: bikeMove;
+    animation-duration: 3s;
+    animation-direction: forward;
+   }
+
+  @keyframes bikeMove{
+    0%{
+      left: 170px;
+      opacity: 0%;
+    }
+    50%{
+      opacity: 100%;
+    }
+    100%{
+      left: 290px;
+      opacity: 100%;
+    }
+
+  }
+
+/*multibox styles*/
+#mainFields{
+  position: relative;
+  left: 420px;
+  top:20px;
+  
+  
+
+}
+#navContent {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+  position: relative;
+  
+}
+
+.multi-button {
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 8px 8px 16px rgba(163,177,198,0.6),
+              -8px -8px 16px rgba(255,255,255, 0.5);
+              border: 1px solid rgb(194, 194, 194);
+}
+
+.multi-button button {
+  background: none;
+  border: none;
+  padding: 1em 1.5em;
+  font-size: .875rem;
+  color: #636269;
+  font-family: inherit;
+  font-weight: 800;
+  background-color: #e0e5ec;
+  cursor: pointer;
+  min-width: 7em;
+  text-align: center;
+}
+
+.multi-button button:hover {
+  background-color: #d8dce3;
+}
+
+.multi-button button.active {
+  background-color: #fff;
+  box-shadow: inset 8px 8px 16px rgba(163, 177, 198, 0.2),
+              inset -8px -8px 16px rgba(255, 255, 255, 0.7);
+}
+
+.multi-button button:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.multi-button button:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.multi-button button + button {
+  box-shadow: -8px -8px 16px rgba(253, 253, 253, 0.5);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main section {
+  width: 350px;
+  height: 400px;
+  margin: 1rem auto;
+  
+  padding: 1rem;
+  display: none; /* Initially hide all sections */
+  position: relative;
+  /* border: 1.5px dashed #818181; */
+  background-color: white;
+  border-radius: 15px;
+  overflow-y: scroll;
+  box-shadow: 0px 6px 16px rgba(133, 133, 133, 0.5);
+  scrollbar-width: thin;
+  scrollbar-3dlight-color: #006400;
+}
+
+main section.active {
+  display: block; /* Show the active section */
+}

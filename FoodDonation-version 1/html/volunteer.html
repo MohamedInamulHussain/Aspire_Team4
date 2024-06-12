@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Volunteer</title>
+    <link rel="stylesheet" href="volunteerStyle.css">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Food Donation App</h1>
+      <div class="navlinks">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="donateFood.html">Donate Food</a>
+        <a href="#" id="volunteerLink">Volunteer</a>
+        <a href="#">Request Food</a>
+      </div>
+    </div>
+
+    <div id="volunteerDetails" style="display:block;">
+      <div class="greetContainer">
+        <h1 id="greetMain">Hi! Volunteer</h1>
+        <h1 id="greetTagline">
+          <a href class="typewrite" data-period="2000"
+            data-type='[ "Lets unite to fight hunger.", " Every donation brings hope.", "Together, we can feed the future.", " lets nourish our community." ]'>
+            <span class="wrap"></span>
+          </a>
+        </h1>
+        <div>
+          <div class="dashboard">
+            <h5
+              style="font-weight: 600;margin-bottom:0px ;">--------DASHBOARD--------</h5>
+
+            <!-- Card 1: Total Donations -->
+            <div class="card">
+              <div class="card-header">Total Donations</div>
+              <div class="score">10</div>
+            </div>
+
+            <!-- Card 2: Current Month Donations -->
+            <div class="card">
+              <div class="card-header">This Month</div>
+              <div class="score">30</div>
+            </div>
+
+            <!-- Card 3: Last Month Donations -->
+            <div class="card">
+              <div class="card-header">Overall Rank</div>
+              <div class="score">20</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div id='mainSection'>
+        <div id="innerSection">
+          <div class='sections' id="availableDonation">
+            <center> <h2>Available Donations</h2> </center>
+            <div id='messageBox'>
+              <h3>Sambar Rice</h3>
+              <div id='messageStatus'>Status: Pending</div>
+              <div style="float: left; width: 200px;">
+                <p>Quantity: 4</p>
+                <p>Location:&nbsp;<a>click here</a></p>
+              </div>
+              <p style="position: absolute;left: 100px;">Timing: 11:25 AM</p>
+              <div id="buttonBox">
+                <button id="btn" style="background-color:green">Accept</button>
+                <button id="btn" style="background-color:grey">Cancel</button>
+              </div>
+            </div>
+            <div id='messageBox' style="top: 190px;">
+              <h3>Chappathi</h3>
+              <div id='messageStatus' style="background-color:orange;">Status:
+                Collected</div>
+              <div style="float: left; width: 200px;">
+                <p>Quantity: 10</p>
+                <p>Location:&nbsp;<a>click here</a></p>
+              </div>
+              <p style="position: absolute;left: 100px;">Timing: 11:25 AM</p>
+              <div id="buttonBox">
+                <button id="btn" style="background-color:green">Accept</button>
+                <button id="btn" style="background-color:grey">Cancel</button>
+              </div>
+            </div>
+            <div id='messageBox' style="top: 300px;">
+              <h3>Briyani</h3>
+              <div id='messageStatus' style="background-color:green">Status:
+                Delivered</div>
+              <div style="float: left; width: 200px;">
+                <p>Quantity: 2</p>
+                <p>Location:&nbsp;<a>click here</a></p>
+              </div>
+              <p style="position: absolute;left: 100px;">Timing: 11:25 AM</p>
+              <div id="buttonBox">
+                <button id="btn" style="background-color:green">Accept</button>
+                <button id="btn" style="background-color:grey">Cancel</button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div> -->
+      <!-- main conetent display area -->
+       <div id="mainFields">
+      <nav id="navContent">
+        <div class="multi-button">
+            <button id="available-donations-btn">Donation Available</button>
+            <button id="food-requests-btn">Food Requests</button>
+            <button id="dashboard-btn">Dashboard</button>
+        </div>
+    </nav>
+    <main>
+        <section id="availableDonations">
+            <h2>Available Food Donations</h2>
+                  <div id='messageBox'>
+                    <h3>Sambar Rice</h3>
+                    <div id='messageStatus'>Status: Pending</div>
+                    <div style="float: left; width: 200px;">
+                      <p>Quantity: 4</p>
+                      <p>Location:&nbsp;<a>click here</a></p>
+                    </div>
+                    <p style="position: absolute;left: 100px;">Timing: 11:25 AM</p>
+                    <div id="buttonBox">
+                      <button id="btn" style="background-color:green">Accept</button>
+                      <button id="btn" style="background-color:grey">Cancel</button>
+                    </div>
+                  </div>
+                  <div id='messageBox'>
+                    <h3>Sambar Rice</h3>
+                    <div id='messageStatus'>Status: Pending</div>
+                    <div style="float: left; width: 200px;">
+                      <p>Quantity: 4</p>
+                      <p>Location:&nbsp;<a>click here</a></p>
+                    </div>
+                    <p style="position: absolute;left: 100px;">Timing: 11:25 AM</p>
+                    <div id="buttonBox">
+                      <button id="btn" style="background-color:green">Accept</button>
+                      <button id="btn" style="background-color:grey">Cancel</button>
+                    </div>
+                  </div>
+                  <div id='messageBox'>
+                    <h3>Sambar Rice</h3>
+                    <div id='messageStatus'>Status: Pending</div>
+                    <div style="float: left; width: 200px;">
+                      <p>Quantity: 4</p>
+                      <p>Location:&nbsp;<a>click here</a></p>
+                    </div>
+                    <p style="position: absolute;left: 100px;">Timing: 11:25 AM</p>
+                    <div id="buttonBox">
+                      <button id="btn" style="background-color:green">Accept</button>
+                      <button id="btn" style="background-color:grey">Cancel</button>
+                    </div>
+                  </div>
+                  <div id='messageBox'>
+                    <h3>Sambar Rice</h3>
+                    <div id='messageStatus'>Status: Pending</div>
+                    <div style="float: left; width: 200px;">
+                      <p>Quantity: 4</p>
+                      <p>Location:&nbsp;<a>click here</a></p>
+                    </div>
+                    <p style="position: absolute;left: 100px;">Timing: 11:25 AM</p>
+                    <div id="buttonBox">
+                      <button id="btn" style="background-color:green">Accept</button>
+                      <button id="btn" style="background-color:grey">Cancel</button>
+                    </div>
+                  </div>
+                  <div id='messageBox'>
+                    <h3>Sambar Rice</h3>
+                    <div id='messageStatus'>Status: Pending</div>
+                    <div style="float: left; width: 200px;">
+                      <p>Quantity: 4</p>
+                      <p>Location:&nbsp;<a>click here</a></p>
+                    </div>
+                    <p style="position: absolute;left: 100px;">Timing: 11:25 AM</p>
+                    <div id="buttonBox">
+                      <button id="btn" style="background-color:green">Accept</button>
+                      <button id="btn" style="background-color:grey">Cancel</button>
+                    </div>
+                  </div>
+        </section>
+        <section id="foodRequests">
+            <h2>Food Requests</h2>
+        </section>
+        <section id="dashboard">
+            <h2>Your Dashboard</h2>
+        </section>
+    </main>
+  </div>
+      <div id='volImageSection'></div>
+    </div>
+    <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const VolunteerDetails = document.getElementById('VolunteerDetails');
+  });
+  </script>
+
+    <!-- //code for text effect -->
+    <script type="text/javascript">
+   var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid black}";
+        document.body.appendChild(css);
+    };
+    //multi box scripts
+
+    const availableDonationsBtn = document.getElementById('available-donations-btn');
+            const foodRequestsBtn = document.getElementById('food-requests-btn');
+            const dashboardBtn = document.getElementById('dashboard-btn');
+            const availableDonations = document.getElementById('availableDonations');
+            const foodRequests = document.getElementById('foodRequests');
+            const dashboard = document.getElementById('dashboard');
+
+            availableDonationsBtn.addEventListener('click', () => {
+                availableDonations.style.display = 'block';
+                foodRequests.style.display = 'none';
+                dashboard.style.display = 'none';
+                availableDonationsBtn.classList.add('active');
+                foodRequestsBtn.classList.remove('active');
+                dashboardBtn.classList.remove('active');
+            });
+
+            foodRequestsBtn.addEventListener('click', () => {
+                availableDonations.style.display = 'none';
+                foodRequests.style.display = 'block';
+                dashboard.style.display = 'none';
+                availableDonationsBtn.classList.remove('active');
+                foodRequestsBtn.classList.add('active');
+                dashboardBtn.classList.remove('active');
+            });
+
+            dashboardBtn.addEventListener('click', () => {
+                availableDonations.style.display = 'none';
+                foodRequests.style.display = 'none';
+                dashboard.style.display = 'block';
+                availableDonationsBtn.classList.remove('active');
+                foodRequestsBtn.classList.remove('active');
+                dashboardBtn.classList.add('active');
+            });
+
+            // Initialize by displaying the first section
+            availableDonationsBtn.click();
+ </script>
+</body>
+</html>
