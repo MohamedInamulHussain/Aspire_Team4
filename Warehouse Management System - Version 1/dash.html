@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dash.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+    <nav class="sidebar close">
+        <header>
+            <img src="pic.jpg" alt="">
+            <div class="name">Admin</div>
+        </header>
+        <div class="menu-content">
+            <ul class="menu-list">
+                <div class="item"><a href=""><i class="fas"></i>Supplier</a></div>
+                <div class="item"><a href=""><i class="fas"></i>Stock</a></div>
+                <div class="item"><a href=""><i class="fas"></i>Order</a></div>
+                <div class="item"><a class="sub-btn"><i class="fas"></i>Transaction
+                        <i class="fas fa-angle-right dropdown"></i></a>
+                    <div class="sub-menu">
+                        <a href="" class="sub-item">Incoming</a>
+                        <a href="" class="sub-item">Outgoing</a>
+                    </div>
+                </div>
+
+                <div class="item"><a href=""><i class="fas"></i>Report</a></div>
+                <div class="item"><a href=""><i class="fas"></i>Profile</a></div>
+                <div class="item"><a href=""><i class="fas"></i>New Order</a></div>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar"><i class="fas fa-bars" id="sidebar-close"></i>
+        <div class="logo">WMS</div>
+        <button class="logout" id="logoutBtn">Logout</button>
+    </nav>
+    <main class="main">
+        <div class="container" id="container">
+            <div class="items">Stock
+                <div class="stock">
+                    45,000
+                </div>
+            </div>
+            <div class="items">Suppliers
+                <div class="supplier">
+                    75
+                </div>
+            </div>
+            <div class="items">Orders
+                <div class="order">
+                    10
+                </div>
+            </div>
+        </div>
+        <div class="supplier-content fullscreen" id="supplier-content">
+            <header>
+                <form action="" class="search-bar">
+                    <input type="text" placeholder="search" name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+                <button class="addsupplier">Add</button>
+            </header>
+            <div class="addsupplier-content">
+                <div class="content">Add Supplier Details</div>
+                <div class="close-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+
+                <form action="">
+                    <div class="additem"><label for="fname">First Name:</label>
+                        <input type="text" class="data" id="fname" required>
+                        <label for="lname">Last Name:</label>
+                        <input type="text" class="data" id="lname" required><br>
+                    </div>
+                    <div class="additem"><label for="Cname">Company Name:</label>
+                        <input type="text" class="data" id="cname" required><br>
+                    </div>
+                    <div class="additem">
+                        <label for="caddress">Company Address:</label>
+                        <textarea type="text" class="data" id="caddress" width="30" height="5" required></textarea><br>
+                    </div>
+                    <div class="additem">
+                        <label for="phnumber">Contact Number:</label>
+                        <input type="tel" class="data" id="phnumber" required><br>
+                    </div>
+                    <button type="submit" class="addsup">ADD</button>
+                </form>
+            </div>
+            <div id="supplierTableContainer" class="supplier-table-container" style="display: none;">
+                <table id="supplierTable">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Company Name</th>
+                            <th>Company Address</th>
+                            <th>Contact Number</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!--Stock-->
+        <div class="stock-content fullscreen" id="stock-content">
+            <header>
+                <form action="" class="search-bar">
+                    <input type="text" placeholder="search" name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+                <button class="addstock">Add</button>
+            </header>
+            <div class="addstock-content">
+                <div class="content">Add Stock Details</div>
+                <div class="close-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+
+                <form action="">
+                    <div class="additems">
+                        <label for="sid">Stock Id:</label>
+                        <input type="number" class="data" id="sid" required>
+                    </div>
+                    <div class="additems">
+                        <label for="cname">Company Name:</label>
+                        <input type="text" class="data" id="cname" required><br>
+                    </div>
+                    <div class="additems">
+                        <label for="mtype">Material type:</label>
+                        <input type="text" class="data" id="mtype" required><br>
+                    </div>
+                    <div class="additems">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" class="data" id="quantity" required><br>
+                    </div>
+                    <button type="submit" class="addstocks">ADD</button>
+                </form>
+            </div>
+            <div id="stockTableContainer" class="stock-table-container" style="display: none;">
+                <table id="stockTable">
+                    <thead>
+                        <tr>
+                            <th>Stock Id</th>
+                            <th>Company Name</th>
+                            <th>Material Type</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="neworder-content fullscreen" id="neworder-content">
+            
+            <div id="notificationContainer"></div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Company Name</th>
+                        <th>Company Address</th>
+                        <th>Contact Number</th>
+                        <th>Email Address</th>
+                    </tr>
+                </thead>
+                <tbody id="dataContainer"></tbody>
+            </table>
+        </div>
+
+    </main>
+    <script src="dash.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            // for toggle sub menu
+            $('.sub-btn').click(function () {
+                $(this).next('.sub-menu').slideToggle();
+                $(this).find('.dropdown').toggleClass('rotate');
+            })
+
+            // Open supplier-content on Supplier link click
+            $('.menu-list .item:nth-child(1) a').click(function (e) {
+                e.preventDefault();
+                $('.supplier-content').fadeIn();
+            });
+
+            // Close supplier-content
+            $('#supplier-content').click(function (e) {
+                if (e.target === this) {
+                    $(this).fadeOut();
+                }
+            });
+            // Check if there is stored data in localStorage
+            var storedData = JSON.parse(localStorage.getItem('supplierData')) || [];
+
+            // Populate the table with stored data on page load
+            if (storedData.length > 0) {
+                storedData.forEach(function (item) {
+                    var newRow = '<tr><td>' + item.fname + '</td><td>' + item.lname + '</td><td>' + item.cname + '</td><td>' + item.caddress + '</td><td>' + item.phnumber + '</td></tr>';
+                    $('#supplierTable tbody').append(newRow);
+                });
+                $('#supplierTableContainer').show(); // Show table container
+            }
+
+            $('.addsup').click(function (e) {
+                e.preventDefault(); // Prevent form submission
+
+                // Get form data
+                var fname = $('#fname').val();
+                var lname = $('#lname').val();
+                var cname = $('#cname').val();
+                var caddress = $('#caddress').val();
+                var phnumber = $('#phnumber').val();
+
+                // Add data to table
+                var newRow = '<tr><td>' + fname + '</td><td>' + lname + '</td><td>' + cname + '</td><td>' + caddress + '</td><td>' + phnumber + '</td></tr>';
+                $('#supplierTable tbody').append(newRow);
+
+                // Show table container
+                $('#supplierTableContainer').show();
+
+                // Clear form fields
+                $('#supplierForm')[0].reset();
+
+                // Update localStorage with new data
+                var newData = {
+                    fname: fname,
+                    lname: lname,
+                    cname: cname,
+                    caddress: caddress,
+                    phnumber: phnumber
+                };
+                storedData.push(newData);
+                localStorage.setItem('supplierData', JSON.stringify(storedData));
+            });
+
+            // Open stock-content on stock link click
+            $('.menu-list .item:nth-child(2) a').click(function (e) {
+                e.preventDefault();
+                $('.stock-content').fadeIn();
+            });
+
+            // Close stock-content
+            $('#stock-content').click(function (e) {
+                if (e.target === this) {
+                    $(this).fadeOut();
+                }
+            });
+            // Check if there is stored data in localStorage
+            var storedData1 = JSON.parse(localStorage.getItem('stockData')) || [];
+
+            // Populate the table with stored data on page load
+            if (storedData1.length > 0) {
+                storedData1.forEach(function (item) {
+                    var newRow = '<tr><td>' + item.sid + '</td><td>' + item.cname + '</td><td>' + item.mtype + '</td><td>' + item.quantity + '</td></tr>';
+                    $('#stockTable tbody').append(newRow);
+                });
+                $('#stockTableContainer').show(); // Show table container
+            }
+
+            $('.addstocks').click(function (e) {
+                e.preventDefault(); // Prevent form submission
+
+                // Get form data
+                var sid = $('#sid').val();
+                var cname = $('#cname').val();
+                var mtype = $('#mtype').val();
+                var quantity = $('#quantity').val();
+
+
+                // Add data to table
+                var newRow = '<tr><td>' + sid + '</td><td>' + cname + '</td><td>' + mtype + '</td><td>' + quantity + '</td></tr>';
+                $('#stockTable tbody').append(newRow);
+
+                // Show table container
+                $('#stockTableContainer').show();
+
+                // Clear form fields
+                $('#stockForm')[0].reset();
+
+                // Update localStorage with new data
+                var newData = {
+                    sid: sid,
+                    cname: cname,
+                    mtype: mtype,
+                    quantity: quantity
+
+                };
+                storedData1.push(newData);
+                localStorage.setItem('stockData', JSON.stringify(storedData));
+            });
+
+            $('.menu-list .item:nth-child(7) a').click(function (e) {
+                e.preventDefault();
+                $('.neworder-content').fadeIn();
+            });
+
+            // Close stock-content
+            $('#neworder-content').click(function (e) {
+                if (e.target === this) {
+                    $(this).fadeOut();
+                }
+            });
+
+        })
+    </script>
+    <script>
+        function fetchNotifications() {
+            fetch('/notifications')
+                .then(response => response.json())
+                .then(data => {
+                    const notificationContainer = document.getElementById('notificationContainer');
+                    const dataContainer = document.getElementById('dataContainer');
+    
+                    notificationContainer.innerHTML = '';
+                    dataContainer.innerHTML = '';
+    
+                    if (data.notifications.length > 0) {
+                        data.notifications.forEach(notification => {
+                            const notificationDiv = document.createElement('div');
+                            notificationDiv.classList.add('notification');
+                            notificationDiv.textContent = notification;
+                            notificationContainer.appendChild(notificationDiv);
+                        });
+                    }
+    
+                    if (data.submissions.length > 0) {
+                        data.submissions.forEach(submission => {
+                            const row = document.createElement('tr');
+                            row.innerHTML = `
+                                <td>${submission.firstName}</td>
+                                <td>${submission.lastName}</td>
+                                <td>${submission.companyName}</td>
+                                <td>${submission.companyAddress}</td>
+                                <td>${submission.contactNumber}</td>
+                                <td>${submission.emailAddress}</td>
+                            `;
+                            dataContainer.appendChild(row);
+                        });
+                    }
+                });
+        }
+    
+        setInterval(fetchNotifications, 3000);
+    </script>
+</body>
+
+</html>

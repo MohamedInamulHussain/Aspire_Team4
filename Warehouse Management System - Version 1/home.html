@@ -1,0 +1,135 @@
+<!--Title of the application: Wareshouse Management system
+    Author: S.Jayashree
+    Created Date:28/03/2024
+    Last Modified:            -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WMS</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <header>
+        <h2 class="wms">WMS</h2>
+        <nav class="navigation">
+            <a href="#home">Home</a>
+            <a href="#aboutus">About</a>
+            <a href="#services">Service</a>
+            <a href="#contact">Contact</a>
+            <button id="loginBtn" class="btnLogin">Login</button>
+        </nav>
+    </header>
+    <div id="home" class="container">
+        <div class="home">
+            <img src="str.webp" class="image" width="100%" height="400">
+            <div class="slogon">Empowering Supply Chains: Elevating Warehousing Efficiency Together!</div>
+        </div><br>
+        <div class="wrapper">
+            <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+            <div class="form-box login">
+                <h5>Login</h5>
+
+                <div class="input-box">
+                    <input type="text" class="username" id="username">
+                    <label for="username">Username :</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="password" id="password">
+                    <label for="password">Password :</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" id="clkbtn" class="clkbtn">Login</button><br>
+                <div class="login-register"><label for="register">You don't have an account ? <a href="#register"
+                            class="register-link">Register</a></label>
+                </div>
+
+
+            </div>
+            <div class="form-box register">
+                <h5>Registeration</h5>
+                <div class="input-box"><label for="name">Username :</label><br>
+                    <input type="text" class="name" id="name"><br>
+                </div>
+                <div class="input-box"><label for="email">Email Id :</label><br>
+                    <input type="email" class="email" id="email"><br>
+                </div>
+                <div class="input-box"><label for="passwords">Password :</label><br>
+                    <input type="password" class="passwords" id="passwords"><br>
+                </div>
+                <div class="input-box"><label for="confirmpasswords">Confirm Password :</label><br>
+                    <input type="password" class="passwords" id="confirmpasswords"><br>
+                </div>
+
+                <button type="submit" class="regbtn">Register</button>
+                <div class="login-register"><label for="register">Already have an account ? <a href="#register"
+                            class="login-link">Login</a></label>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div id="aboutus" class="section">About Us<br>
+    <div class="about">Our warehouse stands as a pinnacle of modern logistics, strategically located and equipped with
+        cutting-edge technology for seamless storage, tracking, and distribution of goods.
+        With advanced systems like barcode scanners and automated storage solutions,
+        we ensure accuracy and efficiency in handling your inventory.
+        Safety is paramount, reflected in our stringent protocols and continuous training.
+        Our commitment to optimizing space and minimizing costs guarantees a streamlined and reliable warehouse
+        experience.
+        Trust us to be your partner in efficient supply chain management, delivering exceptional service and exceeding
+        expectations every step of the way.</div></div>
+
+
+    <br>
+    <div id="services" class="section">Services
+    <div class="service">
+        <div class="item-1">Storage Solution<br><br>
+            <div class="storage">Offering secure, climate-controlled storage spaces for various goods, ensuring their
+                safety and preservation until they are ready for distribution.</div>
+        </div>
+        <div class="item-2">Inventory Management<br><br>
+            <div class="inventory">Implementing advanced inventory tracking systems to manage stock levels, optimize
+                space utilization, and provide real-time visibility into inventory movements.</div>
+        </div>
+        <div class="item-3">Order Fulfillment<br><br>
+            <div class="order">Efficiently picking, packing, and shipping orders to customers or retail locations,
+                ensuring accurate and timely deliveries to maintain customer satisfaction.</div>
+        </div>
+        <div class="item-4">Value-Added Services<br><br>
+            <div class="value">Providing additional services such as labeling, kitting, packaging, and quality control
+                to enhance the value of products and streamline supply chain operations.</div>
+        </div>
+        <div class="item-5">Distribution Management<br><br>
+            <div class="distribution">Serving as a centralized distribution hub, managing the flow of goods to different
+                locations, optimizing shipping routes, and reducing transit times and costs.</div>
+        </div></div>
+
+
+    </div>
+
+    <div id="customers" class="section"></div>
+
+    <div id="contact" class="section">
+        <footer>
+            <h5>Contact:</h5>
+        </footer>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="home.js"></script>
+</body>
+
+</html>
